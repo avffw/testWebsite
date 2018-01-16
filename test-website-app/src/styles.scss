@@ -1,1 +1,51 @@
-$background-component: #2c264a
+
+body{
+  padding: 0;
+  margin: 0;
+}
+/*colors*/
+$header-background: #41316a;
+
+$text-highlight: #11a3a8;
+$text-menu: white;
+
+
+/*dimensions*/
+$grid-width: 960px;
+
+/*mixins*/
+@mixin column-center-Flex{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin row-center-Flex{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-basic-style{
+  height:auto;
+  width: 100vw;
+
+  &_white{
+    background-color: white;
+    padding: 20px 0;
+    }
+  &_purple{
+    background-color: $header-background;
+    padding: 20px 0;
+  }
+
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
