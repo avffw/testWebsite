@@ -1,0 +1,8 @@
+@import '../../styles';
+.video-container{
+  @extend .section-basic-style_purple;
+  @include column-center-Flex;
+  h3{
+    margin: 0;
+  }
+}

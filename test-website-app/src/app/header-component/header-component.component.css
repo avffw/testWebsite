@@ -22,4 +22,7 @@ a {
   text-decoration: none;
   color: inherit; }
 
+.grid-container {
+  width: 960px; }
+
 /*# sourceMappingURL=header-component.component.css.map */
