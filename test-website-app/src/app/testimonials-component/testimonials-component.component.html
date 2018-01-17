@@ -1,1 +1,15 @@
-<div class="section-basic-style_purple"></div>
+<div class="testimonials-container">
+  <div class="grid-container">
+    <h1>{{title}}</h1>
+    <p>{{testimonial.body}}</p>
+    <div class="testimonial-author">
+      <h1>{{testimonial.author.name}}</h1>
+      <h2>{{testimonial.author.position}}</h2>
+    </div>
+    <div class="testimonial-gallery">
+      <div class="testimonial-image" *ngFor="let image of images">
+        {{image}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,8 @@ body{
   margin: 0;
 }
 /*colors*/
+$gallery-colors: #D0D0D0, #909090, #707070, #484848;
+
 $header-background: #41316a;
 
 $text-highlight: #11a3a8;
@@ -14,6 +16,17 @@ $text-menu: white;
 $grid-width: 960px;
 
 /*mixins*/
+@mixin alternate($colors) {
+  $len: length($colors);
+  @each $color in $colors {
+    $i: index($colors, $color);
+    &:nth-of-type(#{$len}n + #{$i}) {
+      background-color: $color;
+    }
+  }
+}
+
+
 @mixin column-center-Flex{
   display: flex;
   flex-flow: column nowrap;
@@ -30,7 +43,7 @@ $grid-width: 960px;
 
 .section-basic-style{
   height:auto;
-  width: 100vw;
+  width: 100%;
 
   &_white{
     background-color: white;
@@ -39,6 +52,7 @@ $grid-width: 960px;
   &_purple{
     background-color: $header-background;
     padding: 20px 0;
+    color: white;
   }
 
 }
@@ -52,4 +66,10 @@ a{
 
 .grid-container{
   width: 960px;
+}
+.button-basic{
+  padding: 5px;
+  width: fit-content;
+  border: 1px solid black;
+  text-transform: uppercase;
 }

@@ -1,1 +1,17 @@
-<div class="section-basic-style_purple"></div>
+<div class="team-container">
+  <div class="grid-container">
+    <h1>{{title}}</h1>
+    <h3>{{tag}}</h3>
+    <div class="team-members-container">
+      <div class="team-member" *ngFor="let member of members">
+        <img src="{{member.image}}" alt="{{member.image}}">
+        <div class="team-member-description">
+          <h1>{{member.name}}</h1>
+          <h2>{{member.position}}</h2>
+        </div>
+      </div>
+    </div>
+    <h3>{{catchPhrase}}</h3>
+    <div class="button-basic">{{teamButton}}</div>
+  </div>
+</div>

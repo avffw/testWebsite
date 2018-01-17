@@ -1,1 +1,35 @@
 @import '../../styles';
+
+.team-container{
+  @extend .section-basic-style_purple;
+  @include row-center-Flex;
+}
+.grid-container{
+  @include column-center-Flex;
+  h1{
+    text-transform: uppercase;
+  }
+
+}
+.team-members-container{
+  @include row-center-Flex;
+
+}
+.team-member{
+  @include column-center-Flex;
+  margin: 10px;
+  border:0.1px solid white;
+
+
+}
+.team-member-description{
+  @include column-center-Flex;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  h1, h2{
+    margin: 0;
+
+  }
+
+}

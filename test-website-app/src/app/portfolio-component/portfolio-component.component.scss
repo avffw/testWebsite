@@ -1,0 +1,26 @@
+@import "../../styles";
+
+.portfolio-container{
+  @extend .section-basic-style_white;
+  @include column-center-Flex;
+  padding: 0;
+}
+.section-row{
+  @include row-center-Flex;
+  width: 100%;
+  min-height: 150px;
+  h1,p{
+    width: 49%;
+  }
+}
+.gallery{
+  width: 100%;
+  @include row-center-Flex;
+  flex-wrap: wrap;
+
+}
+.gallery-item{
+  width:16% ;
+  height: 250px;
+  @include alternate($gallery-colors)
+}
