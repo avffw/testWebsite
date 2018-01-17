@@ -5,7 +5,7 @@
 .section-basic-style {
   height: auto;
   width: 100%; }
-  .section-basic-style_white {
+  .section-basic-style_white, .portfolio-container {
     background-color: white;
     padding: 20px 0;
     width: 100%; }
@@ -36,22 +36,41 @@ a {
   border: 1px solid black;
   text-transform: uppercase; }
 
-.nav-container {
+.portfolio-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0; }
+
+.section-row {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  justify-content: space-around; }
+  width: 100%;
+  min-height: 150px; }
+  .section-row h1, .section-row p {
+    width: 49%; }
 
-ul {
+.gallery {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-  text-transform: uppercase;
-  color: white; }
-  ul li {
-    margin: 0 10px; }
+  flex-wrap: wrap; }
 
-/*# sourceMappingURL=navigation-component.component.css.map */
+.gallery-item {
+  width: 16%;
+  height: 250px; }
+  .gallery-item:nth-of-type(4n + 1) {
+    background-color: #D0D0D0; }
+  .gallery-item:nth-of-type(4n + 2) {
+    background-color: #909090; }
+  .gallery-item:nth-of-type(4n + 3) {
+    background-color: #707070; }
+  .gallery-item:nth-of-type(4n + 4) {
+    background-color: #484848; }
+
+/*# sourceMappingURL=portfolio-component.component.css.map */

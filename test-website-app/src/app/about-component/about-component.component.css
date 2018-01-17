@@ -1,19 +1,24 @@
-body {
-  padding: 0;
-  margin: 0; }
-
 /*colors*/
 /*dimensions*/
 /*mixins*/
+/*global classes*/
 .section-basic-style {
   height: auto;
-  width: 100vw; }
+  width: 100%; }
   .section-basic-style_white, .about-container {
     background-color: white;
-    padding: 20px 0; }
+    padding: 20px 0;
+    width: 100%; }
   .section-basic-style_purple {
+    width: 100%;
     background-color: #41316a;
-    padding: 20px 0; }
+    padding: 20px 0;
+    color: white; }
+.section-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; }
 
 ul {
   list-style: none; }
@@ -24,6 +29,12 @@ a {
 
 .grid-container {
   width: 960px; }
+
+.button-basic {
+  padding: 5px;
+  width: fit-content;
+  border: 1px solid black;
+  text-transform: uppercase; }
 
 .about-container {
   display: flex;
@@ -42,10 +53,5 @@ a {
       text-transform: uppercase; }
   .grid-container .spot-image {
     width: 40%; }
-
-.button-basic {
-  padding: 0 4px;
-  width: fit-content;
-  border: 1px solid black; }
 
 /*# sourceMappingURL=about-component.component.css.map */

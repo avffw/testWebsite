@@ -1,1 +1,9 @@
 @import '../../styles';
+.footer-container{
+  @extend .section-basic-style_purple;
+  @include column-center-Flex;
+}
+.section-row{
+justify-content: space-around;
+}
+

@@ -1,0 +1,114 @@
+/*colors*/
+/*dimensions*/
+/*mixins*/
+/*global classes*/
+.section-basic-style {
+  height: auto;
+  width: 100%; }
+  .section-basic-style_white, .contact-container {
+    background-color: white;
+    padding: 20px 0;
+    width: 100%; }
+  .section-basic-style_purple {
+    width: 100%;
+    background-color: #41316a;
+    padding: 20px 0;
+    color: white; }
+.section-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.grid-container {
+  width: 960px; }
+
+.button-basic {
+  padding: 5px;
+  width: fit-content;
+  border: 1px solid black;
+  text-transform: uppercase; }
+
+.contact-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  margin-right: 30pt; }
+
+/*start form*/
+.contact-form, .sponsors {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 512pt;
+  margin: 0 30pt; }
+  .contact-form h1, .sponsors h1 {
+    margin: 0; }
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  /*  border: 1px solid black;*/
+  height: 402pt; }
+
+input, textarea {
+  padding-left: 20px;
+  margin: 5px 0;
+  width: 440pt;
+  height: 44pt;
+  text-align: left;
+  border: 0.1pt solid #e5e5e5; }
+  input:nth-child(4), textarea:nth-child(4) {
+    height: 200pt; }
+  input::placeholder, textarea::placeholder {
+    color: #a09ea5;
+    text-transform: capitalize; }
+
+textarea {
+  padding-top: 15px;
+  overflow: auto;
+  resize: none; }
+  textarea::-webkit-scrollbar {
+    display: none; }
+
+/*end form*/
+.sponsors {
+  height: 460pt; }
+
+.sponsor-gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  /*  border: 1px solid black;*/
+  max-width: calc((162pt + 5pt*2)*2); }
+
+.sponsor-image {
+  width: 162pt;
+  height: 70pt;
+  margin: 5pt; }
+  .sponsor-image:nth-of-type(4n + 1) {
+    background-color: #D0D0D0; }
+  .sponsor-image:nth-of-type(4n + 2) {
+    background-color: #909090; }
+  .sponsor-image:nth-of-type(4n + 3) {
+    background-color: #707070; }
+  .sponsor-image:nth-of-type(4n + 4) {
+    background-color: #484848; }
+
+/*# sourceMappingURL=contact-component.component.css.map */

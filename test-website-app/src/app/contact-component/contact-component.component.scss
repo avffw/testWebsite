@@ -1,0 +1,87 @@
+@import "../../styles";
+
+.contact-container{
+  @extend .section-basic-style_white;
+  @include row-center-Flex;
+  align-items: flex-start;
+
+  margin-right: $contact-section-gutter;
+
+}
+
+/*start form*/
+
+.contact-form{
+  @include column-center-Flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  height: 512pt;
+  margin: 0 $contact-section-gutter;
+
+  h1{
+    margin: 0;
+  }
+}
+form{
+  @include column-center-Flex;
+  align-items: flex-start;
+/*  border: 1px solid black;*/
+  height: 402pt;
+
+}
+input{
+  padding-left: 20px;
+  margin:5px 0;
+
+  width: 440pt;
+  height: 44pt;
+
+  text-align: left;
+  border: 0.1pt solid #e5e5e5;
+  &:nth-child(4){
+    height: 200pt;
+
+  }
+  &::placeholder{
+    color:$placeholder-color;
+    text-transform: capitalize;
+
+
+
+  }
+
+}
+textarea{
+  @extend input;
+  padding-top: 15px;
+  overflow:auto;
+  resize: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+/*end form*/
+.sponsors{
+
+  @extend .contact-form;
+  height: 460pt;
+}
+.sponsor-gallery{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+/*  border: 1px solid black;*/
+
+
+
+  max-width: calc((#{$sponsor-image-width} + #{$sponsor-image-gutter}*2)*2);
+}
+.sponsor-image{
+  width: $sponsor-image-width;
+  height: $sponsor-image-height;
+  @include alternate($gallery-colors);
+  margin: $sponsor-image-gutter;
+}
+

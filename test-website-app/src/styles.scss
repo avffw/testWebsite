@@ -1,9 +1,6 @@
 
-body{
-  padding: 0;
-  margin: 0;
-}
 /*colors*/
+$placeholder-color: #a09ea5;
 $gallery-colors: #D0D0D0, #909090, #707070, #484848;
 
 $header-background: #41316a;
@@ -12,9 +9,13 @@ $text-highlight: #11a3a8;
 $text-menu: white;
 
 
-/*dimensions*/
-$grid-width: 960px;
 
+/*dimensions*/
+$grid-width: 960pt;
+$sponsor-image-height: 70pt;
+$sponsor-image-width:162pt;
+$sponsor-image-gutter: 5pt;
+$contact-section-gutter: 30pt;
 /*mixins*/
 @mixin alternate($colors) {
   $len: length($colors);
@@ -25,7 +26,6 @@ $grid-width: 960px;
     }
   }
 }
-
 
 @mixin column-center-Flex{
   display: flex;
@@ -41,35 +41,46 @@ $grid-width: 960px;
   align-items: center;
 }
 
-.section-basic-style{
-  height:auto;
-  width: 100%;
+/*global classes*/
 
-  &_white{
-    background-color: white;
-    padding: 20px 0;
+
+.section {
+  &-basic-style {
+    height: auto;
+    width: 100%;
+
+    &_white {
+      background-color: white;
+      padding: 20px 0;
+      width: 100%;
     }
-  &_purple{
-    background-color: $header-background;
-    padding: 20px 0;
-    color: white;
+    &_purple {
+      width: 100%;
+      background-color: $header-background;
+      padding: 20px 0;
+      color: white;
+    }
+
+  }
+  &-row {
+    @include row-center-Flex;
+  }
+}
+  ul{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
   }
 
-}
-ul{
-  list-style: none;
-}
-a{
-  text-decoration: none;
-  color: inherit;
-}
+  .grid-container{
+    width: 960px;
+  }
+  .button-basic{
+    padding: 5px;
+    width: fit-content;
+    border: 1px solid black;
+    text-transform: uppercase;
+  }
 
-.grid-container{
-  width: 960px;
-}
-.button-basic{
-  padding: 5px;
-  width: fit-content;
-  border: 1px solid black;
-  text-transform: uppercase;
-}

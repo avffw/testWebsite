@@ -1,3 +1,27 @@
-<p>
-  contact-component works!
-</p>
+<div class="contact-container">
+
+  <div class="contact-form">
+    <h1>{{formTitle}}</h1>
+    <form action="">
+      <input type="text" name="name" placeholder="name">
+      <input type="text" name="email" placeholder="email">
+      <input type="text" name="subject" placeholder="subject">
+      <textarea type="text" name="message" placeholder="Your Message"></textarea>
+
+    </form>
+    <div class="button-basic">
+      submit
+    </div>
+  </div>
+  <div class="sponsors">
+    <h1>{{sponsorTitle}}</h1>
+
+    <div class="sponsor-gallery">
+
+        <img  *ngFor="let sponsor of sponsors" class="sponsor-image" src="{{sponsor.image}}" alt="{{sponsor.image}}">
+
+    </div>
+
+  </div>
+
+</div>
