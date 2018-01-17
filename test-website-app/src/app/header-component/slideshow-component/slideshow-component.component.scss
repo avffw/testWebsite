@@ -1,0 +1,46 @@
+@import '../../../styles';
+.slideshow-container{
+  width:770pt;
+  height: 370pt;
+  @include column-center-Flex;
+
+  border: 1px solid white;
+
+  text-align: center;
+  h1,p{
+    margin: 0;
+  }
+}
+.decoraive-bar{
+  width: 52pt;
+  height: $slideshow-bar-spacing;
+  margin-bottom: $slideshow-bar-spacing;
+  border-bottom: 0.1px solid $highlight;
+}
+.button-basic{
+  margin-top: $slideshow-bar-spacing*2;
+}
+.slideshow-position-circles{
+  height: 12pt;
+  width: 55pt;
+  @include row-center-Flex;
+}
+.circle{
+  height: 10px;
+  width: 10px;
+  margin: 0 2.5pt;
+  padding: 0;
+
+  border: 1px solid $border-light;
+  border-radius: 50%;
+
+
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: none;
+
+  &:active,&:hover,&:focus{
+    background-color:$highlight;
+    border-color: $highlight;
+  }
+}

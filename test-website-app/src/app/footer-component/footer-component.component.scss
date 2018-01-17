@@ -4,6 +4,7 @@
   @include column-center-Flex;
 }
 .section-row{
-justify-content: space-around;
+  @include row-center-Flex;
+  justify-content: space-around;
 }
 

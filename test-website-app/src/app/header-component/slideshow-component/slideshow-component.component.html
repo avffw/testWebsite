@@ -1,3 +1,11 @@
-<p>
-  slideshow-component works!
-</p>
+<div class="slideshow-container">
+  <h1>{{slides[currentSlide].title}}</h1>
+  <div class="decoraive-bar"></div>
+  <p>{{slides[currentSlide].body}}</p>
+  <div class="button-basic">Learn More</div>
+  <div class="slideshow-position-circles">
+    <input class="circle" *ngFor="let circle of slides">
+
+
+  </div>
+</div>

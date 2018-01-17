@@ -43,6 +43,10 @@ a {
   align-items: center; }
 
 .section-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   justify-content: space-around; }
 
 /*# sourceMappingURL=footer-component.component.css.map */
