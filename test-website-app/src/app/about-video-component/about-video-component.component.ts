@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-video-component.component.scss']
 })
 export class AboutVideoComponentComponent implements OnInit {
-
+  image:string='../../assets/images/icons/play_icon.png';
   constructor() { }
 
   ngOnInit() {

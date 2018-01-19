@@ -2,7 +2,11 @@
 .video-container{
   @extend .section-basic-style_purple;
   @include column-center-Flex;
+  background-image: url("../../assets/images/bg/video_bg.png");
   h3{
-    margin: 0;
+    margin-top: 25px;
+    @include default-header;
+    font-family: Montserrat, sans-serif;
   }
+  
 }

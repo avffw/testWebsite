@@ -5,6 +5,14 @@
 }
 .grid-container{
   @include column-center-Flex;
+  h1{
+    @include default-header;
+  }
+  h4{
+    @include default-header;
+    font-family: "Montserrat Light", sans-serif;
+    font-size: 0.8em;
+  }
 }
 
 .services-list{
@@ -17,15 +25,23 @@
   width: 28%;
   @include column-center-Flex;
   margin: 10px 20px;
+
   /*border: 1px solid saddlebrown;*/
   h1{
-    text-transform: uppercase;
-    font-size: 0.6em;
-    text-align: center;
+    @include default-header;
+    font-family: "Montserrat Light", sans-serif;
+    font-size: 0.9em;
+
+
   }
   p{
-    font-size: 0.9em;
+    @include default-paragraph;
+    color: $paragraph-color;
     text-align: center;
+
+  }
+  *{
+    margin: 10px 0 ;
   }
 }
 

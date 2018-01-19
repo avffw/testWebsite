@@ -2,17 +2,29 @@
 .about-container{
   @extend .section-basic-style_white;
   @include row-center-Flex;
+
 }
 .grid-container{
   @include row-center-Flex;
+  justify-content: space-around;
   .spot-article {
-    width: 60%;
+    @include column-center-Flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-basis: 52%;
+    *{
+      margin: 20px 0;
+    }
     h1{
+      @include default-header;
+      margin: 0;
+      padding: 0;
       text-transform: uppercase;
     }
   }
   .spot-image{
-    width: 40%;
+    flex-basis: 23%;
+
   }
 }
 

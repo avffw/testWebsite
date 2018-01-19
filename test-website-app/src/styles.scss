@@ -1,5 +1,5 @@
 /*default font styling*/
-$font-title: 'Montserrat Bold', sans-serif;
+$font-title: 'Montserrat black', sans-serif;
 $font-subtitle: 'Montserrat Semi Bold', sans-serif;
 $font-paragraph: 'Montserrat Light', sans-serif;
 $font-button: 'Montserrat', sans-serif;
@@ -14,6 +14,7 @@ $purple-background: #4d3e73;
 $highlight:#00e0d0;
 $text-highlight: #00e0d0;
 $text-menu: white;
+$paragraph-color:#7a7a7a;
 
 
 
@@ -60,7 +61,18 @@ $contact-section-gutter: 30pt;
   }
   transition: all ease-in 250ms;
 }
+@mixin default-header{
+  font-family: $font-title;
+  font-size: 1.5em;
+  text-transform: uppercase;
 
+}
+@mixin default-paragraph{
+  font-family: $font-paragraph;
+  font-size: 0.8em;
+  text-align: left;
+
+}
 /*global classes*/
 
 
@@ -73,11 +85,13 @@ $contact-section-gutter: 30pt;
       background-color: white;
       padding: 20px 0;
       width: 100%;
+      min-height: 350pt;
     }
     &_purple {
       position: relative;
       z-index: 1;
       width: 100%;
+      min-height: 550px;
       height: auto;
       padding: 20px 0;
       color: white;
