@@ -1,20 +1,20 @@
 <div class="footer-container">
-  <div class="section-row">
-    <div class="description">
-      <img src="" alt="Logo img">
+  <div class="footer-sections">
+    <div class="footer-description">
+      <img src="{{logo}}" alt="Logo img">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea eaque eius eum
         ipsam nesciunt nulla pariatur quas quasi quidem, quis quisquam, quod recusandae reiciendis reprehenderit sint ut
         vero voluptate!</p>
     </div>
     <div class="contact-details">
       <h1>Our Studio</h1>
-      <div class="location-spot">
-        <img src="" alt="location icon">
+      <div class="spot-location">
+        <img src="{{locationIcon}}" alt="location icon">
         <p>Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat
           11480 - Indonesia</p>
       </div>
-      <div class="phone-spot">
-        <img src="" alt="phone icon">
+      <div class="spot-phone">
+        <img src="{{phoneIcon}}" alt="phone icon">
         <p>(+62) 21-2224 3333</p>
       </div>
     </div>
@@ -25,13 +25,13 @@
         <div class="button-subscribe">Subscribe</div>
       </div>
       <div class="social-buttons-container">
-        <div class="social-button">
-          <img src="" alt="social icon">
+        <div class="social-button" *ngFor="let socialIcon of socialIcons">
+          <img src="{{socialIcon.icon}}" alt="social icon">
         </div>
       </div>
     </div>
   </div>
-  <div class="section-row">
+  <div class="footer-extras">
     <div class="extras">
       <a href="#">Help</a>
       <a href="#">Terms & Conditions</a>

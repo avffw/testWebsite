@@ -1,3 +1,4 @@
+/*default font styling*/
 /*colors*/
 /*dimensions*/
 /*mixins*/
@@ -8,12 +9,29 @@
   .section-basic-style_white {
     background-color: white;
     padding: 20px 0;
-    width: 100%; }
-  .section-basic-style_purple, .team-container {
     width: 100%;
-    background-color: #41316a;
+    min-height: 350pt; }
+  .section-basic-style_purple, .team-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 550px;
+    height: auto;
     padding: 20px 0;
-    color: white; }
+    color: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+    .section-basic-style_purple:before, .team-container:before {
+      mix-blend-mode: multiply;
+      width: 100%;
+      height: 100%;
+      content: '';
+      opacity: 0.99;
+      background: #4d3e73;
+      position: absolute;
+      left: 0;
+      z-index: -1; }
 .section-row {
   display: flex;
   flex-flow: row nowrap;
@@ -30,25 +48,69 @@ a {
 .grid-container {
   width: 960px; }
 
-.button-basic {
-  padding: 5px;
+.button-basic, .button-basic_white {
+  padding: 10px;
   width: fit-content;
-  border: 1px solid black;
-  text-transform: uppercase; }
+  border: 1px solid #00e0d0;
+  -webkit-border-radius: 1.5px;
+  -moz-border-radius: 1.5px;
+  border-radius: 1.5px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  color: #00e0d0;
+  cursor: pointer;
+  transition: all ease-in 100ms; }
+  .button-basic:active, .button-basic_white:active {
+    color: #4d3e73;
+    border-color: white;
+    background-color: white; }
+  .button-basic_white {
+    transition: all ease-in 100ms; }
+    .button-basic_white:active {
+      color: white;
+      border-color: #4d3e73;
+      background-color: #4d3e73; }
 
 .team-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/images/bg/team_bg.png");
+  height: 600pt; }
+
+.decoraive-bar {
+  width: 52pt;
+  height: 12pt;
+  margin-bottom: 25pt;
+  border-bottom: 0.1px solid white; }
+
+.title-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   align-items: center; }
+  .title-wrap * {
+    margin: 8px 0; }
 
 .grid-container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%; }
   .grid-container h1 {
+    font-family: "Montserrat black", sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
     text-transform: uppercase; }
+  .grid-container h3 {
+    font-family: "Montserrat black", sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: "Montserrat Semi Bold", sans-serif;
+    font-size: 0.8em; }
 
 .team-members-container {
   display: flex;
@@ -69,10 +131,21 @@ a {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 0.6em;
-  text-transform: uppercase;
-  padding: 10px 10px; }
-  .team-member-description h1, .team-member-description h2 {
-    margin: 0; }
+  justify-content: last-baseline;
+  min-height: 100px; }
+  .team-member-description h1 {
+    margin-bottom: 5px;
+    font-family: "Montserrat black", sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9em; }
+  .team-member-description h2 {
+    margin-top: 5px;
+    font-family: "Montserrat black", sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: "Montserrat Light", sans-serif;
+    font-size: 0.6em; }
 
 /*# sourceMappingURL=team-component.component.css.map */

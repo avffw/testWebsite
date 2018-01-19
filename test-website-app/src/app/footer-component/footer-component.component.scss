@@ -1,10 +1,90 @@
 @import '../../styles';
-.footer-container{
+
+.footer-container {
   @extend .section-basic-style_purple;
   @include column-center-Flex;
-}
-.section-row{
-  @include row-center-Flex;
-  justify-content: space-around;
+  background-image: url("../../assets/images/bg/footer_bg.png");
 }
 
+.footer-sections {
+  @include row-center-Flex;
+  justify-content: space-between;
+  width: $grid-width;
+  height: 100%;
+
+}
+
+.footer-extras {
+  @include row-center-Flex;
+  justify-content: space-between;
+
+  width: $grid-width;
+}
+
+.footer-description {
+  @include footer-box;
+}
+
+.contact-details {
+
+
+  @include footer-box;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.social-media {
+  @include column-center-Flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @include footer-box;
+  @extend .contact-details;
+  *{margin: 0;
+    padding: 0;
+  }
+}
+
+.spot-location {
+  @include row-center-Flex;
+
+  * {
+
+  }
+  p {
+    width: 93%;
+    margin-top: 20px;
+  }
+  img {
+    margin-right: 2%;
+  }
+
+}
+.spot-phone{
+  @extend .spot-location;
+}
+.newsletter-container{
+  @include row-center-Flex;
+  width: 200pt;
+
+  input{
+    background-color: transparent;
+    border: 0.1px solid $paragraph-color;
+    width: 200pt;
+    height: 30pt;
+  }
+}
+.social-buttons-container{
+  @include row-center-Flex;
+  justify-content: space-between;
+  width: 200pt;
+
+}
+.social-button{
+  @include column-center-Flex;
+  width: 30pt;
+  height: 30pt;
+  border: 1px solid white;
+  border-radius: 50%;
+}

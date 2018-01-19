@@ -25,6 +25,8 @@ $sponsor-image-height: 70pt;
 $sponsor-image-width:162pt;
 $sponsor-image-gutter: 22pt;
 $contact-section-gutter: 30pt;
+$footer-column-width: 280pt;
+$footer-column-height: 160pt;
 /*mixins*/
 @mixin alternate($colors) {
   $len: length($colors);
@@ -73,6 +75,11 @@ $contact-section-gutter: 30pt;
   text-align: left;
 
 }
+@mixin footer-box{
+  width: $footer-column-width;
+  height:$footer-column-height;
+
+}
 /*global classes*/
 
 
@@ -94,7 +101,7 @@ $contact-section-gutter: 30pt;
       min-height: 550px;
       height: auto;
       padding: 20px 0;
-      color: white;
+      color: #ffffff;
       background-size:     cover;
       background-repeat:   no-repeat;
       background-position: center center;
