@@ -6,7 +6,8 @@
   align-items: flex-start;
 
   margin-right: $contact-section-gutter;
-
+  min-height: 600pt;
+padding-top: 5%;
 }
 
 /*start form*/
@@ -20,6 +21,7 @@
   margin: 0 $contact-section-gutter;
 
   h1{
+    @include default-header;
     margin: 0;
   }
 }
@@ -69,19 +71,25 @@ textarea{
 }
 .sponsor-gallery{
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: column wrap;
+  justify-content: space-around;
   align-items: center;
-/*  border: 1px solid black;*/
+  height:410pt;
+  width:362pt;
+
 
 
 
   max-width: calc((#{$sponsor-image-width} + #{$sponsor-image-gutter}*2)*2);
 }
 .sponsor-image{
-  width: $sponsor-image-width;
-  height: $sponsor-image-height;
-  @include alternate($gallery-colors);
+ /* width: $sponsor-image-width;
+  height: $sponsor-image-height;*/
+  /*@include alternate($gallery-colors);*/
   margin: $sponsor-image-gutter;
+
+}
+.sponsor-image-wrap{
+
 }
 

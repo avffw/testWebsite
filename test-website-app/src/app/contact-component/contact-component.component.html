@@ -18,7 +18,9 @@
 
     <div class="sponsor-gallery">
 
-        <img  *ngFor="let sponsor of sponsors" class="sponsor-image" src="{{sponsor.image}}" alt="{{sponsor.image}}">
+        <div class="sponsor-image-wrap">
+          <img  *ngFor="let sponsor of sponsors" class="sponsor-image" src="{{sponsor.image}}" alt="">
+        </div>
 
     </div>
 

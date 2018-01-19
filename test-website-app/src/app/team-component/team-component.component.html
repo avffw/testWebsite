@@ -1,7 +1,10 @@
 <div class="team-container">
   <div class="grid-container">
-    <h1>{{title}}</h1>
-    <h3>{{tag}}</h3>
+    <div class="title-wrap">
+      <h1>{{title}}</h1>
+      <h3>{{tag}}</h3>
+      <div class="decoraive-bar"></div>
+    </div>
     <div class="team-members-container">
       <div class="team-member" *ngFor="let member of members">
         <img src="{{member.image}}" alt="{{member.image}}">
@@ -11,7 +14,9 @@
         </div>
       </div>
     </div>
-    <h3>{{catchPhrase}}</h3>
-    <div class="button-basic">{{teamButton}}</div>
+    <div class="title-wrap">
+      <h3>{{catchPhrase}}</h3>
+      <div class="button-basic">{{teamButton}}</div>
+    </div>
   </div>
 </div>

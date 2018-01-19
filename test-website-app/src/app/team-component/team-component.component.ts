@@ -11,19 +11,19 @@ export class TeamComponentComponent implements OnInit {
   catchPhrase: string = 'Become part of out amazing team!';
   teamButton: string = 'we are hiring';
   members: any[] =[
-  {image:'member img',
+  {image:'../../assets/images/people/blank.png',
   name: 'semf ucuk',
   position: 'ceo & founder'},
-  {image:'member img',
+  {image:'../../assets/images/people/blank.png',
     name: 'semf ucuk',
     position: 'ceo & founder'},
-  {image:'member img',
+  {image:'../../assets/images/people/blank.png',
     name: 'semf ucuk',
     position: 'ceo & founder'},
-  {image:'member img',
+  {image:'../../assets/images/people/blank.png',
     name: 'semf ucuk',
     position: 'ceo & founder'},
-  {image:'member img',
+  {image:'../../assets/images/people/blank.png',
     name: 'semf ucuk',
     position: 'ceo & founder'}
 

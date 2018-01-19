@@ -2,16 +2,41 @@
 .testimonials-container{
   @extend .section-basic-style_purple;
   @include column-center-Flex;
+
+  background-image: url("../../assets/images/bg/testimonials_bg.png");
   justify-content: flex-start;
-  padding-top: 100px;
-  min-height: 550px;
-  position: relative;
+  padding: 0;
+
+
 }
 .grid-container{
 
   @include column-center-Flex;
+  h1{
+    @include default-header;
 
+  }
+  p{
+    @include default-paragraph;
+    text-align: center;
+  }
 
+  padding-top:3%;
+}
+.testimonial-author{
+@include column-center-Flex;
+  h1{
+    @include default-header;
+    font-family: $font-subtitle;
+    font-size: 0.9em;
+    margin-top: 20px;
+  }
+  h2{
+    @include default-paragraph;
+    font-family: $font-paragraph;
+    font-size: 0.7em;
+
+  }
 }
 .testimonial-gallery{
   @include row-center-Flex;
@@ -20,15 +45,20 @@
   bottom: 20%;
 }
 .testimonial-image{
-  @include alternate($gallery-colors);
+
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin: 10px;
 
-  &:hover{
-    width: 70px;
-    height: 70px;
+  img {
+    &:hover {
+
+      transform: scale(1.4);
+
+    }
+    transition: all 200ms ease-in;
+
   }
-  transition: all 0.3s ease-in;
+
 }

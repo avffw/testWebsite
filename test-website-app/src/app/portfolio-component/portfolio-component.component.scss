@@ -3,6 +3,7 @@
 .portfolio-container{
   @extend .section-basic-style_white;
   @include column-center-Flex;
+  justify-content: space-around;
   padding: 0;
 }
 .section-row{
@@ -23,4 +24,29 @@
   width:16% ;
   height: 250px;
   @include alternate($gallery-colors)
+}
+.title-wrap{
+  width: 50%;
+  @include row-center-Flex;
+  @include default-header;
+  font-size: 0.9em;
+}
+.link-wrap{
+  @include default-link;
+  text-transform: none;
+  text-align: center;
+  width: 50%;
+  @include row-center-Flex;
+
+  a{
+    width: auto;
+    cursor: pointer;
+  }
+  img{
+    cursor: pointer;
+    margin-top: 2px;
+    margin-left: 5px;
+    width:5px;
+    height:10px;
+  }
 }

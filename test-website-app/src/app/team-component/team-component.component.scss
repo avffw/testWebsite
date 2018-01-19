@@ -1,34 +1,71 @@
 @import '../../styles';
 
-.team-container{
+.team-container {
   @extend .section-basic-style_purple;
   @include row-center-Flex;
+  background-image: url("../../assets/images/bg/team_bg.png");
+  height: 600pt;
 }
-.grid-container{
+
+.decoraive-bar {
+  width: 52pt;
+  height: 12pt;
+  margin-bottom: $slideshow-bar-spacing;
+  border-bottom: 0.1px solid white;
+}
+
+.title-wrap {
   @include column-center-Flex;
-  h1{
+
+  * {
+    margin: 8px 0;
+  }
+}
+
+.grid-container {
+  @include column-center-Flex;
+  justify-content: space-evenly;
+  height:100%;
+
+  h1 {
+    @include default-header;
     text-transform: uppercase;
+  }
+  h3 {
+    @include default-header;
+    font-family: $font-subtitle;
+    font-size: 0.8em;
   }
 
 }
-.team-members-container{
+
+.team-members-container {
   @include row-center-Flex;
 
 }
-.team-member{
+
+.team-member {
   @include column-center-Flex;
   margin: 10px;
-  border:0.1px solid white;
-
+  border: 0.1px solid white;
 
 }
-.team-member-description{
+
+.team-member-description {
   @include column-center-Flex;
-  font-size: 0.6em;
-  text-transform: uppercase;
-  padding: 10px 10px;
-  h1, h2{
-    margin: 0;
+  justify-content: last-baseline;
+  min-height: 100px;
+  h1 {
+    margin-bottom: 5px;
+    @include default-header;
+    font-family: $font-link;
+    font-size: 0.9em;
+  }
+  h2 {
+    margin-top: 5px;
+    @include default-header;
+    font-family: $font-paragraph;
+    font-size: 0.6em;
 
   }
 

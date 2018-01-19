@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio-component.component.scss']
 })
 export class PortfolioComponentComponent implements OnInit {
+  forward: string = '../../assets/images/icons/forward.png';
   title: string = 'our works';
   link: string = 'See All Projects in dribble';
   galleryItems: any[]= new Array(12);
