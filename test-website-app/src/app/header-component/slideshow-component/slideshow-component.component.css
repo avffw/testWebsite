@@ -51,7 +51,7 @@ a {
 .button-basic, .button-basic_white {
   padding: 10px;
   width: fit-content;
-  border: 1px solid #00e0d0;
+  border: 1px solid #05e0bf;
   -webkit-border-radius: 1.5px;
   -moz-border-radius: 1.5px;
   border-radius: 1.5px;
@@ -92,7 +92,7 @@ a {
   width: 52pt;
   height: 25pt;
   margin-bottom: 25pt;
-  border-bottom: 0.1px solid #00e0d0; }
+  border-bottom: 0.1px solid #05e0bf; }
 
 .button-basic, .button-basic_white {
   margin-top: 50pt; }
@@ -117,7 +117,7 @@ a {
   background-color: transparent;
   text-decoration: none; }
   .circle:active, .circle:hover, .circle:focus {
-    background-color: #00e0d0;
-    border-color: #00e0d0; }
+    background-color: #05e0bf;
+    border-color: #05e0bf; }
 
 /*# sourceMappingURL=slideshow-component.component.css.map */

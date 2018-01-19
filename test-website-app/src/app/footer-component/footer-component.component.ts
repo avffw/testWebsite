@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponentComponent implements OnInit {
   logo: string = '../../assets/images/logos/footer_logo.png';
+  subscribe: string = '../../assets/images/icons/newsletter_btn.png';
   locationIcon: string = '../../assets/images/icons/location.png';
   phoneIcon: string = '../../assets/images/icons/phone351.png';
   socialIcons: any[] = [

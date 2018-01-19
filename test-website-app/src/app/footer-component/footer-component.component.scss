@@ -9,7 +9,8 @@
 .footer-sections {
   @include row-center-Flex;
   justify-content: space-between;
-  width: $grid-width;
+  align-items: stretch;
+  width: 900pt;
   height: 100%;
 
 }
@@ -17,8 +18,9 @@
 .footer-extras {
   @include row-center-Flex;
   justify-content: space-between;
+  margin-top: 20px;
+  width: 900pt;
 
-  width: $grid-width;
 }
 
 .footer-description {
@@ -26,7 +28,6 @@
 }
 
 .contact-details {
-
 
   @include footer-box;
   * {
@@ -36,14 +37,17 @@
 }
 
 .social-media {
+
   @include column-center-Flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   @include footer-box;
   @extend .contact-details;
-  *{margin: 0;
+  * {
+    margin: 0;
     padding: 0;
   }
+  width: 200pt;
 }
 
 .spot-location {
@@ -61,30 +65,65 @@
   }
 
 }
-.spot-phone{
+
+.spot-phone {
   @extend .spot-location;
 }
-.newsletter-container{
+
+.newsletter-container {
   @include row-center-Flex;
+  justify-content: space-between;
   width: 200pt;
 
-  input{
+  input {
     background-color: transparent;
     border: 0.1px solid $paragraph-color;
-    width: 200pt;
+    width: 140pt;
     height: 30pt;
   }
 }
-.social-buttons-container{
+
+.social-buttons-container {
   @include row-center-Flex;
   justify-content: space-between;
   width: 200pt;
 
 }
-.social-button{
+
+.social-button {
   @include column-center-Flex;
+  cursor: pointer;
   width: 30pt;
   height: 30pt;
   border: 1px solid white;
   border-radius: 50%;
+  &:hover {
+    background-color: $highlight;
+    border-color: $highlight;
+    opacity: 1;
+  }
+  &:active {
+    background-color: #a09ea5;
+    border-color: #a09ea5;
+  }
+  transition: all 200ms ease;
+
+}
+
+.button-subscribe {
+  @include column-center-Flex;
+  width: 50pt;
+  height: 30pt;
+  background-color: white;
+  opacity: 0.6;
+  cursor: pointer;
+  &:hover {
+    background-color: $highlight;
+    opacity: 1;
+  }
+  &:active {
+    background-color: #029ae0;
+  }
+  transition: all 200ms ease;
+
 }
