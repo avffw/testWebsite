@@ -1,10 +1,16 @@
+/*default font styling*/
+$font-title: 'Montserrat Bold', sans-serif;
+$font-subtitle: 'Montserrat Semi Bold', sans-serif;
+$font-paragraph: 'Montserrat Light', sans-serif;
+$font-button: 'Montserrat', sans-serif;
+$font-link: 'Montserrat', sans-serif;
 
 /*colors*/
 $placeholder-color: #a09ea5;
 $border-light:#a09ea5;
 $gallery-colors: #D0D0D0, #909090, #707070, #484848;
 
-$header-background: #41316a;
+$purple-background: #4d3e73;
 $highlight:#00e0d0;
 $text-highlight: #00e0d0;
 $text-menu: white;
@@ -42,6 +48,18 @@ $contact-section-gutter: 30pt;
   justify-content: center;
   align-items: center;
 }
+@mixin default-link{
+  font-family: $font-link;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  &:hover, &:focus{
+    color:$text-highlight;
+  }
+  &:active{
+    color: #029ae0;
+  }
+  transition: all ease-in 250ms;
+}
 
 /*global classes*/
 
@@ -57,10 +75,27 @@ $contact-section-gutter: 30pt;
       width: 100%;
     }
     &_purple {
+      position: relative;
+      z-index: 1;
       width: 100%;
-      background-color: $header-background;
+      height: auto;
       padding: 20px 0;
       color: white;
+      background-size:     cover;
+      background-repeat:   no-repeat;
+      background-position: center center;
+      &:before{
+        mix-blend-mode: multiply ;
+        width: 100%;
+        height: 100%;
+        content: '';
+        opacity: 0.99;
+        background: $purple-background;
+        position: absolute;
+        left: 0;
+
+        z-index: -1;
+      }
     }
 
   }
@@ -80,9 +115,34 @@ $contact-section-gutter: 30pt;
     width: 960px;
   }
   .button-basic{
-    padding: 5px;
+    padding: 10px;
     width: fit-content;
-    border: 1px solid black;
+    border: 1px solid $highlight;
+    -webkit-border-radius: 1.5px;
+    -moz-border-radius: 1.5px;
+    border-radius: 1.5px;
+
     text-transform: uppercase;
+    font-family: $font-button;
+    color: $text-highlight;
+    cursor: pointer;
+    &:active{
+      color: $purple-background;
+      border-color: rgba(255, 255, 255, 1);
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    transition: all ease-in 100ms;
+    &_white{
+      @extend .button-basic;
+      &:active{
+        color: rgba(255, 255, 255, 1);
+        border-color: $purple-background;
+        background-color: $purple-background;
+      }
+
+      transition: all ease-in 100ms;
+    }
+
   }
 

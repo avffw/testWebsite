@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation-component.component.scss']
 })
 export class NavigationComponentComponent implements OnInit {
-
+  image:string = '../../assets/images/logos/footer_logo.png';
   menuItems: any[] = [
     {name:'home'},
     {name:'about'},

@@ -1,14 +1,17 @@
 @import '../../../styles';
 .slideshow-container{
-  width:770pt;
+  width:540pt;
   height: 370pt;
+
   @include column-center-Flex;
 
-  border: 1px solid white;
+  /*border: 1px solid white;*/
 
   text-align: center;
   h1,p{
     margin: 0;
+
+
   }
 }
 .decoraive-bar{
@@ -23,6 +26,7 @@
 .slideshow-position-circles{
   height: 12pt;
   width: 55pt;
+  margin-top: 10%;
   @include row-center-Flex;
 }
 .circle{
