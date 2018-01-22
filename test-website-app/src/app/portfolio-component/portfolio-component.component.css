@@ -1,149 +1,35 @@
-/*default font styling*/
-/*colors*/
-/*dimensions*/
-/*mixins*/
-/*global classes*/
-.section-basic-style {
-  height: auto;
-  width: 100%; }
-  .section-basic-style_white, .portfolio-container {
-    background-color: white;
-    padding: 20px 0;
-    width: 100%;
-    min-height: 350pt; }
-  .section-basic-style_purple {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    min-height: 550px;
-    height: auto;
-    padding: 20px 0;
-    color: #ffffff;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; }
-    .section-basic-style_purple:before {
-      mix-blend-mode: multiply;
-      width: 100%;
-      height: 100%;
-      content: '';
-      opacity: 0.99;
-      background: #4d3e73;
-      position: absolute;
-      left: 0;
-      z-index: -1; }
-.section-row {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center; }
+/*
+Sass::SyntaxError: ".portfolio-container" failed to @extend ".section-basic-style_white".
+The selector ".section-basic-style_white" was not found.
+Use "@extend .section-basic-style_white !optional" if the extend should be able to fail.
 
-ul {
-  list-style: none; }
 
-a {
-  text-decoration: none;
-  color: inherit; }
-
-.grid-container {
-  width: 960px; }
-
-.button-basic, .button-basic_white {
-  padding: 10px;
-  width: fit-content;
-  border: 1px solid #05e0bf;
-  -webkit-border-radius: 1.5px;
-  -moz-border-radius: 1.5px;
-  border-radius: 1.5px;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  color: #00e0d0;
-  cursor: pointer;
-  transition: all ease-in 100ms; }
-  .button-basic:active, .button-basic_white:active {
-    color: #4d3e73;
-    border-color: white;
-    background-color: white; }
-  .button-basic_white {
-    transition: all ease-in 100ms; }
-    .button-basic_white:active {
-      color: white;
-      border-color: #4d3e73;
-      background-color: #4d3e73; }
-
-.portfolio-container {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0; }
-
-.section-row {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 150px; }
-  .section-row h1, .section-row p {
-    width: 49%; }
-
-.gallery {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; }
-
-.gallery-item {
-  width: 16%;
-  height: 250px; }
-  .gallery-item:nth-of-type(4n + 1) {
-    background-color: #D0D0D0; }
-  .gallery-item:nth-of-type(4n + 2) {
-    background-color: #909090; }
-  .gallery-item:nth-of-type(4n + 3) {
-    background-color: #707070; }
-  .gallery-item:nth-of-type(4n + 4) {
-    background-color: #484848; }
-
-.title-wrap {
-  width: 50%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  font-family: "Montserrat black", sans-serif;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-size: 0.9em; }
-
-.link-wrap {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  transition: all ease-in 250ms;
-  text-transform: none;
-  text-align: center;
-  width: 50%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center; }
-  .link-wrap:hover, .link-wrap:focus {
-    color: #00e0d0; }
-  .link-wrap:active {
-    color: #029ae0; }
-  .link-wrap a {
-    width: auto;
-    cursor: pointer; }
-  .link-wrap img {
-    cursor: pointer;
-    margin-top: 2px;
-    margin-left: 5px;
-    width: 5px;
-    height: 10px; }
-
-/*# sourceMappingURL=portfolio-component.component.css.map */
+Backtrace:
+portfolio-component.component.scss:4
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/extend.rb:56:in `block in check_extends_fired!'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/util/subset_map.rb:105:in `block in each_value'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/util/subset_map.rb:105:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/util/subset_map.rb:105:in `each_value'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/extend.rb:51:in `check_extends_fired!'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/extend.rb:16:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:39:in `css_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/bin/scss:13:in `<top (required)>'
+C:/Ruby24-x64/bin/scss:23:in `load'
+C:/Ruby24-x64/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Sass::SyntaxError: \".portfolio-container\" failed to @extend \".section-basic-style_white\".\A The selector \".section-basic-style_white\" was not found.\A Use \"@extend .section-basic-style_white !optional\" if the extend should be able to fail.\A "; }

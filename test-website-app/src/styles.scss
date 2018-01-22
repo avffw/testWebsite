@@ -1,4 +1,4 @@
-/*default font styling*/
+/*default font family*/
 $font-title: 'Montserrat black', sans-serif;
 $font-subtitle: 'Montserrat Semi Bold', sans-serif;
 $font-paragraph: 'Montserrat Light', sans-serif;
@@ -7,22 +7,21 @@ $font-link: 'Montserrat', sans-serif;
 
 /*colors*/
 $placeholder-color: #a09ea5;
-$border-light:#a09ea5;
+$border-light: #a09ea5;
+
 $gallery-colors: #D0D0D0, #909090, #707070, #484848;
 
-$purple-background: #4d3e73;
+$background-purple: #4d3e73;
 $highlight: #05e0bf;
 $text-highlight: #00e0d0;
 $text-menu: white;
-$paragraph-color:#7a7a7a;
-
-
+$paragraph-color: #7a7a7a;
 
 /*dimensions*/
 $slideshow-bar-spacing: 25pt;
 $grid-width: 960pt;
 $sponsor-image-height: 70pt;
-$sponsor-image-width:162pt;
+$sponsor-image-width: 162pt;
 $sponsor-image-gutter: 22pt;
 $contact-section-gutter: 30pt;
 $footer-column-width: 280pt;
@@ -38,80 +37,97 @@ $footer-column-height: 160pt;
   }
 }
 
-@mixin column-center-Flex{
+@mixin column-center-Flex {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 
-@mixin row-center-Flex{
+@mixin row-center-Flex {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
-@mixin default-link{
+
+@mixin default-link {
   font-family: $font-link;
   font-size: 0.8em;
   text-transform: uppercase;
-  &:hover, &:focus{
-    color:$text-highlight;
+  &:hover, &:focus {
+    color: $text-highlight;
   }
-  &:active{
+  &:active {
     color: #029ae0;
   }
   transition: all ease-in 250ms;
 }
-@mixin default-header{
+
+@mixin default-header {
   font-family: $font-title;
   font-size: 1.5em;
   text-transform: uppercase;
 
 }
-@mixin default-paragraph{
+
+@mixin default-paragraph {
   font-family: $font-paragraph;
   font-size: 0.8em;
   text-align: left;
 
 }
-@mixin footer-box{
+
+@mixin footer-box {
   width: $footer-column-width;
-  height:$footer-column-height;
+  height: $footer-column-height;
 
 }
+
 /*global classes*/
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.grid__container {
+  width: 960px;
+}
 
 .section {
-  &-basic-style {
+  &__basic-style {
     height: auto;
     width: 100%;
 
-    &_white {
+    &--white {
       background-color: white;
       padding: 20px 0;
       width: 100%;
       min-height: 350pt;
     }
-    &_purple {
+    &--purple {
       position: relative;
       z-index: 1;
       width: 100%;
       min-height: 550px;
       height: auto;
       padding: 20px 0;
-      color: #ffffff;
-      background-size:     cover;
-      background-repeat:   no-repeat;
+      color: white;
+      background-size: cover;
+      background-repeat: no-repeat;
       background-position: center center;
-      &:before{
-        mix-blend-mode: multiply ;
+      &:before {
+        mix-blend-mode: multiply;
         width: 100%;
         height: 100%;
         content: '';
         opacity: 0.99;
-        background: $purple-background;
+        background: $background-purple;
         position: absolute;
         left: 0;
 
@@ -120,22 +136,13 @@ $footer-column-height: 160pt;
     }
 
   }
-  &-row {
+  &__row {
     @include row-center-Flex;
   }
 }
-  ul{
-    list-style: none;
-  }
-  a{
-    text-decoration: none;
-    color: inherit;
-  }
 
-  .grid-container{
-    width: 960px;
-  }
-  .button-basic{
+.button {
+  &__highlight {
     padding: 10px;
     width: fit-content;
     border: 1px solid $highlight;
@@ -147,23 +154,27 @@ $footer-column-height: 160pt;
     font-family: $font-button;
     color: $text-highlight;
     cursor: pointer;
-    &:active{
-      color: $purple-background;
+    &:active {
+      color: $background-purple;
       border-color: rgba(255, 255, 255, 1);
       background-color: rgba(255, 255, 255, 1);
     }
 
     transition: all ease-in 100ms;
-    &_white{
-      @extend .button-basic;
-      &:active{
+  }
+
+  &__colored{
+    &--white{ @extend .button__highlight;
+      &:active {
         color: rgba(255, 255, 255, 1);
-        border-color: $purple-background;
-        background-color: $purple-background;
+        border-color: $background-purple;
+        background-color: $background-purple;
       }
 
       transition: all ease-in 100ms;
     }
-
   }
+
+
+}
 

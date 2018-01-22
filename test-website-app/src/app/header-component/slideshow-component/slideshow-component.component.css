@@ -1,28 +1,38 @@
-/*default font styling*/
+/*default font family*/
 /*colors*/
 /*dimensions*/
 /*mixins*/
 /*global classes*/
-.section-basic-style {
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.grid__container {
+  width: 960px; }
+
+.section__basic-style {
   height: auto;
   width: 100%; }
-  .section-basic-style_white {
+  .section__basic-style--white {
     background-color: white;
     padding: 20px 0;
     width: 100%;
     min-height: 350pt; }
-  .section-basic-style_purple {
+  .section__basic-style--purple {
     position: relative;
     z-index: 1;
     width: 100%;
     min-height: 550px;
     height: auto;
     padding: 20px 0;
-    color: #ffffff;
+    color: white;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
-    .section-basic-style_purple:before {
+    .section__basic-style--purple:before {
       mix-blend-mode: multiply;
       width: 100%;
       height: 100%;
@@ -32,23 +42,13 @@
       position: absolute;
       left: 0;
       z-index: -1; }
-.section-row {
+.section__row {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center; }
 
-ul {
-  list-style: none; }
-
-a {
-  text-decoration: none;
-  color: inherit; }
-
-.grid-container {
-  width: 960px; }
-
-.button-basic, .button-basic_white {
+.button__highlight, .button__colored--white {
   padding: 10px;
   width: fit-content;
   border: 1px solid #05e0bf;
@@ -60,16 +60,16 @@ a {
   color: #00e0d0;
   cursor: pointer;
   transition: all ease-in 100ms; }
-  .button-basic:active, .button-basic_white:active {
+  .button__highlight:active, .button__colored--white:active {
     color: #4d3e73;
     border-color: white;
     background-color: white; }
-  .button-basic_white {
-    transition: all ease-in 100ms; }
-    .button-basic_white:active {
-      color: white;
-      border-color: #4d3e73;
-      background-color: #4d3e73; }
+.button__colored--white {
+  transition: all ease-in 100ms; }
+  .button__colored--white:active {
+    color: white;
+    border-color: #4d3e73;
+    background-color: #4d3e73; }
 
 .slideshow-container {
   width: 540pt;
@@ -94,7 +94,7 @@ a {
   margin-bottom: 25pt;
   border-bottom: 0.1px solid #05e0bf; }
 
-.button-basic, .button-basic_white {
+.button-basic {
   margin-top: 50pt; }
 
 .slideshow-position-circles {
