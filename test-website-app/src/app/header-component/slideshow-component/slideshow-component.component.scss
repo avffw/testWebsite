@@ -44,9 +44,10 @@
   cursor: pointer;
   background-color: transparent;
   text-decoration: none;
-
   &:active,&:hover,&:focus{
     background-color:$highlight;
     border-color: $highlight;
   }
-}
+
+  }
+
