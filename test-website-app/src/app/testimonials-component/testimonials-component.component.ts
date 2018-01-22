@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-testimonials-component',
@@ -7,54 +7,76 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestimonialsComponentComponent implements OnInit {
   title: string = '"';
-  images : any[] = new Array(5);
-  testimonial: any[] =[
+  images: any[] = new Array(5);
+
+  testimonial: any[] = [
     {
-      author:{
-        name:'Jane Galadriel',
-        position:'CEO Tengkurep'
+      author: {
+        name: 'Jane Galadriel',
+        position: 'CEO Tengkurep',
       },
-      body: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.',
-      image:'../../assets/images/people/face1.png'
+      body: '1This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.',
+      image: '../../assets/images/people/face1.png',
+      id: '0'
     },
     {
-      author:{
-        name:'Jane Galadriel',
-        position:'CEO Tengkurep'
+      author: {
+        name: 'Jane Galadriel',
+        position: 'CEO Tengkurep'
       },
-      body: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.',
-      image:'../../assets/images/people/face2.png'
+      body: '2This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.',
+      image: '../../assets/images/people/face2.png',
+      id: '1'
     },
     {
-      author:{
-        name:'Jane Galadriel',
-        position:'CEO Tengkurep'
+      author: {
+        name: 'Jane Galadriel',
+        position: 'CEO Tengkurep'
       },
-      body: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.',
-      image:'../../assets/images/people/face3.png'
+      body: '3This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.',
+      image: '../../assets/images/people/face3.png',
+      id: '2'
     },
     {
-      author:{
-        name:'Jane Galadriel',
-        position:'CEO Tengkurep'
+      author: {
+        name: 'Jane Galadriel',
+        position: 'CEO Tengkurep'
       },
-      body: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.',
-      image:'../../assets/images/people/face4.png'
+      body: '4This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.',
+      image: '../../assets/images/people/face4.png',
+      id: '3'
     },
     {
-      author:{
-        name:'Jane Galadriel',
-        position:'CEO Tengkurep'
+      author: {
+        name: 'Jane Galadriel',
+        position: 'CEO Tengkurep'
       },
-      body: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.',
-      image:'../../assets/images/people/face5.png'
+      body: '5This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.',
+      image: '../../assets/images/people/face5.png',
+      id: '4'
     }
 
 
-    ];
-  constructor() { }
+  ];
+  defaultTestimonial: number;
+  currentTestimonial: number;
 
-  ngOnInit() {
+  constructor() {
+    this.defaultTestimonial = Math.floor(this.testimonial.length/2);
+
+  this.currentTestimonial = this.defaultTestimonial;
+
   }
 
+
+  ngOnInit() {
+
+  }
+
+  onSelectAuthor(index) {
+    this.changeTestimonial(index);
+  }
+  changeTestimonial(index){
+    this.currentTestimonial = index;
+  }
 }

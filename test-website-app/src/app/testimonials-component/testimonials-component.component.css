@@ -130,6 +130,7 @@ a {
   border-radius: 50%;
   margin: 10px; }
   .testimonial-image img {
+    cursor: pointer;
     transition: all 200ms ease-in; }
     .testimonial-image img:hover {
       transform: scale(1.4); }

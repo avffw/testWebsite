@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import set = Reflect.set;
+
 
 
 declare var jquery: any;
@@ -71,11 +71,11 @@ export class SlideshowComponentComponent implements OnInit {
   }
 
   changeSlide() {
-    this.currentSlide+=1;
+    this.onChangeSlide();
   }
 
   onChangeSlide() {
-    console.log(this.currentSlide);
+
     if (this.currentSlide !== this.slides.length - 1) {
       this.currentSlide += 1;
     } else {
@@ -83,8 +83,6 @@ export class SlideshowComponentComponent implements OnInit {
     }
 
   }
-
-  ind: any;
 
 
 }

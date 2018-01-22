@@ -10,6 +10,7 @@ export class TeamComponentComponent implements OnInit {
   tag: string = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
   catchPhrase: string = 'Become part of out amazing team!';
   teamButton: string = 'we are hiring';
+
   members: any[] =[
   {image:'../../assets/images/people/blank.png',
   name: 'semf ucuk',
