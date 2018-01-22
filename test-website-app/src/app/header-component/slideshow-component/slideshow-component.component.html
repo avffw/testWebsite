@@ -4,7 +4,7 @@
   <p>{{slides[currentSlide].body}}</p>
   <div class="button-basic">Learn More</div>
   <div class="slideshow-position-circles">
-    <div class="circle" *ngFor="let circle of slides">
+    <div class="circle" (click)="changeSlide()"  *ngFor="let circle of slides">
     </div>
 
 
