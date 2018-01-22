@@ -1,16 +1,21 @@
 @import '../../styles';
-.nav-container{
+
+.nav__container {
   @include row-center-Flex;
   justify-content: space-around;
 }
-ul{
 
-@include row-center-Flex;
-  justify-content: flex-end;
-  li{
-    margin: 0 10px;
-    @include default-link
+.menu__items {
+  ul {
+    @include row-center-Flex;
+    justify-content: flex-end;
+    li {
+      margin: 0 10px;
+      @include default-link
+    }
+
   }
 
 }
+
 

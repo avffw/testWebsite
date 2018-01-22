@@ -1,7 +1,8 @@
 @import "../../styles";
 
-.contact-container{
-  @extend .section-basic-style_white;
+.contact__container{
+  @extend .section__basic-style--white;
+  @extend .section__row;
   @include row-center-Flex;
   align-items: flex-start;
 
@@ -12,7 +13,7 @@ padding-top: 5%;
 
 /*start form*/
 
-.contact-form{
+.contact__form{
   @include column-center-Flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -54,6 +55,7 @@ input{
   }
 
 }
+
 textarea{
   @extend input;
   padding-top: 15px;
@@ -66,10 +68,10 @@ textarea{
 /*end form*/
 .sponsors{
 
-  @extend .contact-form;
+  @extend .contact__form;
   height: 460pt;
 }
-.sponsor-gallery{
+.sponsor__gallery{
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
@@ -82,14 +84,14 @@ textarea{
 
   max-width: calc((#{$sponsor-image-width} + #{$sponsor-image-gutter}*2)*2);
 }
-.sponsor-image{
+.sponsor__image{
  /* width: $sponsor-image-width;
   height: $sponsor-image-height;*/
   /*@include alternate($gallery-colors);*/
   margin: $sponsor-image-gutter;
 
 }
-.sponsor-image-wrap{
+.sponsor__image__wrap{
 
 }
 

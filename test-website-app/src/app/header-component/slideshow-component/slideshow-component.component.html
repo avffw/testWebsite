@@ -1,11 +1,11 @@
-<div class="slideshow-container">
+<div class="slideshow__container">
   <h1>{{slides[currentSlide].title}}</h1>
-  <div class="decoraive-bar"></div>
+  <div class="decorative-bar"></div>
   <p>{{slides[currentSlide].body}}
 
   </p>
-  <div class="button-basic">Learn More</div>
-  <div class="slideshow-position-circles">
+  <div class="button__highlight--purple slideshow__button">Learn More</div>
+  <div class="slideshow__position-circles">
     <div class="circle"
          *ngFor="let circle of slides; let ind = index;"
           [ngStyle]="{backgroundColor: ind==slides[currentSlide].id ? '#05E0BF':'transparent'}"

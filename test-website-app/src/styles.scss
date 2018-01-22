@@ -1,4 +1,5 @@
 /*default font family*/
+$font-regular:'Montserrat', sans-serif;
 $font-title: 'Montserrat black', sans-serif;
 $font-subtitle: 'Montserrat Semi Bold', sans-serif;
 $font-paragraph: 'Montserrat Light', sans-serif;
@@ -103,7 +104,6 @@ a {
   &__basic-style {
     height: auto;
     width: 100%;
-
     &--white {
       background-color: white;
       padding: 20px 0;
@@ -139,42 +139,48 @@ a {
   &__row {
     @include row-center-Flex;
   }
+  &__column{
+    @include column-center-Flex;
+  }
 }
 
 .button {
+  padding: 10px;
+  width: fit-content;
+  text-transform: uppercase;
+  cursor: pointer;
   &__highlight {
-    padding: 10px;
-    width: fit-content;
+    @extend .button;
+    color: $text-highlight;
     border: 1px solid $highlight;
     -webkit-border-radius: 1.5px;
     -moz-border-radius: 1.5px;
     border-radius: 1.5px;
-
-    text-transform: uppercase;
     font-family: $font-button;
-    color: $text-highlight;
-    cursor: pointer;
-    &:active {
-      color: $background-purple;
-      border-color: rgba(255, 255, 255, 1);
-      background-color: rgba(255, 255, 255, 1);
-    }
+
 
     transition: all ease-in 100ms;
-  }
+    &--purple{
+      @extend .button__highlight;
+      &:active {
+        color: $background-purple;
+        border-color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 1);
 
-  &__colored{
-    &--white{ @extend .button__highlight;
+      }
+
+    }
+    &--white{
+      @extend .button__highlight;
       &:active {
         color: rgba(255, 255, 255, 1);
         border-color: $background-purple;
         background-color: $background-purple;
       }
 
-      transition: all ease-in 100ms;
     }
-  }
 
+  }
 
 }
 

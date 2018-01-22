@@ -1,12 +1,12 @@
 @import "../../styles";
 
 .portfolio-container{
-  @extend .section-basic-style_white;
-  @include column-center-Flex;
+  @extend .section__basic-style--white;
+  @extend .section__column;
   justify-content: space-around;
   padding: 0;
 }
-.section-row{
+.section__row{
   @include row-center-Flex;
   width: 100%;
   min-height: 150px;
@@ -20,23 +20,23 @@
   flex-wrap: wrap;
 
 }
-.gallery-item{
+.gallery__item{
   width:16% ;
   height: 250px;
   @include alternate($gallery-colors)
 }
-.title-wrap{
+.title__wrap{
   width: 50%;
   @include row-center-Flex;
   @include default-header;
   font-size: 0.9em;
 }
-.link-wrap{
+.link__wrap{
+  @include row-center-Flex;
   @include default-link;
   text-transform: none;
   text-align: center;
   width: 50%;
-  @include row-center-Flex;
 
   a{
     width: auto;
@@ -44,7 +44,7 @@
   }
   img{
     cursor: pointer;
-    margin-top: 2px;
+    margin-top: 1px;
     margin-left: 5px;
     width:5px;
     height:10px;

@@ -1,47 +1,57 @@
 @import '../../styles';
-.products-container{
-  @extend .section-basic-style_white;
-  @include row-center-Flex;
-}
-.grid-container{
-  @include column-center-Flex;
-  h1{
-    @include default-header;
-  }
-  h4{
-    @include default-header;
-    font-family: "Montserrat Light", sans-serif;
-    font-size: 0.8em;
+
+.products {
+  &__container {
+    @extend .section__basic-style--white;
+    @extend .section__row;
   }
 }
 
-.services-list{
-  width: 100%;
-  @include row-center-Flex;
-  flex-wrap: wrap;
-  /*border: 1px solid saddlebrown;*/
+.grid {
+  &__container {
+    @include column-center-Flex;
+    h1 {
+      @include default-header;
+    }
+    h4 {
+      @include default-header;
+      font-family: "Montserrat Light", sans-serif;
+      font-size: 0.8em;
+    }
+  }
 }
-.service{
+
+.services {
+  &__list {
+    width: 100%;
+    @include row-center-Flex;
+    flex-wrap: wrap;
+    /*border: 1px solid saddlebrown;*/
+  }
+}
+
+.service {
   width: 28%;
   @include column-center-Flex;
   margin: 10px 20px;
 
   /*border: 1px solid saddlebrown;*/
-  h1{
+  h1 {
     @include default-header;
     font-family: "Montserrat Light", sans-serif;
     font-size: 0.9em;
 
-
   }
-  p{
+  p {
     @include default-paragraph;
     color: $paragraph-color;
     text-align: center;
 
   }
-  *{
-    margin: 10px 0 ;
+  * {
+    margin: 10px 0;
   }
 }
+
+
 

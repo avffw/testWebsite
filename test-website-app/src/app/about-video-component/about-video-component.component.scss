@@ -1,12 +1,13 @@
 @import '../../styles';
-.video-container{
-  @extend .section-basic-style_purple;
-  @include column-center-Flex;
+.video__container{
+  @extend .section__basic-style--purple;
+  @extend .section__column;
   background-image: url("../../assets/images/bg/video_bg.png");
+
   h3{
     margin-top: 25px;
     @include default-header;
-    font-family: Montserrat, sans-serif;
+    font-family: $font-regular;
   }
-  
+
 }

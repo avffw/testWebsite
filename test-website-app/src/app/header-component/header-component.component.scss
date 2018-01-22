@@ -1,7 +1,8 @@
 @import '../../styles';
-.header-container{
-  @extend .section-basic-style_purple;
-  @include column-center-Flex;
+.header__container{
+  @extend .section__basic-style--purple;
+  @extend .section__column;
+
   background-image: url("../../assets/images/bg/header_background.png");
 
 }

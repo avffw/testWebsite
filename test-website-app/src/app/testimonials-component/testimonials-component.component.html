@@ -1,18 +1,20 @@
-<div class="testimonials-container">
+<div class="testimonials__container">
   <div class="grid-container">
     <h1>{{title}}</h1>
     <p>{{testimonial[currentTestimonial].body}}</p>
-    <div class="testimonial-author">
+    <div class="testimonial__author">
       <h1>{{testimonial[currentTestimonial].author.name}}</h1>
       <h2>{{testimonial[currentTestimonial].author.position}}</h2>
     </div>
-    <div class="testimonial-gallery">
+    <div class="testimonial__gallery">
       <img src="../../assets/images/icons/back.png" alt="" class="back">
-      <div class="testimonial-image" *ngFor="let image of testimonial; let ind = index;"
-      (click)="onSelectAuthor(ind);">
+      <div class="testimonial__image"
+           *ngFor="let image of testimonial; let ind = index;"
+           (click)="onSelectAuthor(ind);">
 
         <img src="{{image.image}}" alt=""
-             [ngStyle]="{transform: ind==testimonial[currentTestimonial].id ? 'scale(1.4)': 'none'}">
+             [ngStyle]="{transform: ind==testimonial[currentTestimonial].id ? 'scale(1.4)': 'none'}"
+        >
       </div>
       <img src="../../assets/images/icons/forward.png" alt="" class="back">
     </div>

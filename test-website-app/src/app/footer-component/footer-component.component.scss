@@ -1,30 +1,29 @@
 @import '../../styles';
 
-.footer-container {
-  @extend .section-basic-style_purple;
-  @include column-center-Flex;
-  background-image: url("../../assets/images/bg/footer_bg.png");
-}
+.footer {
+  &__container {
+    @extend .section__basic-style--purple;
+    @extend .section__column;
 
-.footer-sections {
-  @include row-center-Flex;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 900pt;
-  height: 100%;
+    background-image: url("../../assets/images/bg/footer_bg.png");
+  }
+  &__sections {
+    @include row-center-Flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 900pt;
+    height: 100%;
+  }
+  &__extras {
+    @include row-center-Flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 900pt;
+  }
+  &__description {
+    @include footer-box;
+  }
 
-}
-
-.footer-extras {
-  @include row-center-Flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  width: 900pt;
-
-}
-
-.footer-description {
-  @include footer-box;
 }
 
 .contact-details {
@@ -37,12 +36,13 @@
 }
 
 .social-media {
-
+  @extend .contact-details;
   @include column-center-Flex;
   justify-content: space-between;
   align-items: flex-start;
+
   @include footer-box;
-  @extend .contact-details;
+
   * {
     margin: 0;
     padding: 0;
@@ -50,27 +50,27 @@
   width: 200pt;
 }
 
-.spot-location {
+.spot {
   @include row-center-Flex;
+  &__location {
+    * {
 
-  * {
-
+    }
+    p {
+      width: 93%;
+      margin-top: 20px;
+    }
+    img {
+      margin-right: 2%;
+    }
   }
-  p {
-    width: 93%;
-    margin-top: 20px;
-  }
-  img {
-    margin-right: 2%;
+  &__phone {
+    @extend .spot__location;
   }
 
 }
 
-.spot-phone {
-  @extend .spot-location;
-}
-
-.newsletter-container {
+.newsletter__container {
   @include row-center-Flex;
   justify-content: space-between;
   width: 200pt;
@@ -83,7 +83,7 @@
   }
 }
 
-.social-buttons-container {
+.social-buttons__container {
   @include row-center-Flex;
   justify-content: space-between;
   width: 200pt;

@@ -1,6 +1,6 @@
-<div class="contact-container">
+<div class="contact__container">
 
-  <div class="contact-form">
+  <div class="contact__form">
     <h1>{{formTitle}}</h1>
     <form action="">
       <input type="text" name="name" placeholder="name">
@@ -9,16 +9,16 @@
       <textarea type="text" name="message" placeholder="Your Message"></textarea>
 
     </form>
-    <div class="button-basic">
+    <div class="button__highlight--white">
       submit
     </div>
   </div>
   <div class="sponsors">
     <h1>{{sponsorTitle}}</h1>
 
-    <div class="sponsor-gallery">
+    <div class="sponsor__gallery">
 
-        <div class="sponsor-image-wrap">
+        <div class="sponsor__image__wrap">
           <img  *ngFor="let sponsor of sponsors" class="sponsor-image" src="{{sponsor.image}}" alt="">
         </div>
 

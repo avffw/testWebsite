@@ -1,22 +1,22 @@
-<div class="team-container">
+<div class="team__container">
   <div class="grid-container">
-    <div class="title-wrap">
+    <div class="title__wrap">
       <h1>{{title}}</h1>
       <h3>{{tag}}</h3>
-      <div class="decoraive-bar"></div>
+      <div class="decorative-bar"></div>
     </div>
-    <div class="team-members-container">
-      <div class="team-member" *ngFor="let member of members">
+    <div class="team-members__container">
+      <div class="team__member" *ngFor="let member of members">
         <img src="{{member.image}}" alt="{{member.image}}">
-        <div class="team-member-description">
+        <div class="team__member__description">
           <h1>{{member.name}}</h1>
           <h2>{{member.position}}</h2>
         </div>
       </div>
     </div>
-    <div class="title-wrap">
+    <div class="title__wrap">
       <h3>{{catchPhrase}}</h3>
-      <div class="button-basic">{{teamButton}}</div>
+      <div class="button__highlight--purple">{{teamButton}}</div>
     </div>
   </div>
 </div>

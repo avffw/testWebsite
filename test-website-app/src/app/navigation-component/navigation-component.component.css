@@ -47,52 +47,56 @@ a {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center; }
+.section__column {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; }
 
-.button__highlight, .button__colored--white {
+.button, .button__highlight, .button__highlight--purple, .button__highlight--white {
   padding: 10px;
   width: fit-content;
-  border: 1px solid #05e0bf;
-  -webkit-border-radius: 1.5px;
-  -moz-border-radius: 1.5px;
-  border-radius: 1.5px;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  color: #00e0d0;
-  cursor: pointer;
-  transition: all ease-in 100ms; }
-  .button__highlight:active, .button__colored--white:active {
-    color: #4d3e73;
-    border-color: white;
-    background-color: white; }
-.button__colored--white {
-  transition: all ease-in 100ms; }
-  .button__colored--white:active {
-    color: white;
-    border-color: #4d3e73;
-    background-color: #4d3e73; }
+  cursor: pointer; }
+  .button__highlight, .button__highlight--purple, .button__highlight--white {
+    color: #00e0d0;
+    border: 1px solid #05e0bf;
+    -webkit-border-radius: 1.5px;
+    -moz-border-radius: 1.5px;
+    border-radius: 1.5px;
+    font-family: "Montserrat", sans-serif;
+    transition: all ease-in 100ms; }
+    .button__highlight--purple:active {
+      color: #4d3e73;
+      border-color: white;
+      background-color: white; }
+    .button__highlight--white:active {
+      color: white;
+      border-color: #4d3e73;
+      background-color: #4d3e73; }
 
-.nav-container {
+.nav__container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   justify-content: space-around; }
 
-ul {
+.menu__items ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   justify-content: flex-end; }
-  ul li {
+  .menu__items ul li {
     margin: 0 10px;
     font-family: "Montserrat", sans-serif;
     font-size: 0.8em;
     text-transform: uppercase;
     transition: all ease-in 250ms; }
-    ul li:hover, ul li:focus {
+    .menu__items ul li:hover, .menu__items ul li:focus {
       color: #00e0d0; }
-    ul li:active {
+    .menu__items ul li:active {
       color: #029ae0; }
 
 /*# sourceMappingURL=navigation-component.component.css.map */

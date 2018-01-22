@@ -1,29 +1,30 @@
 @import '../../styles';
-.about-container{
-  @extend .section-basic-style_white;
-  @include row-center-Flex;
 
-}
 .grid-container{
   @include row-center-Flex;
   justify-content: space-around;
-  .spot-article {
-    @include column-center-Flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-basis: 52%;
-    *{
-      margin: 20px 0;
+
+
+  .spot{
+    &__image{
+      flex-basis: 23%;
     }
-    h1{
-      @include default-header;
-      margin: 0;
-      padding: 0;
-      text-transform: uppercase;
+    &__article{
+      @include column-center-Flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-basis: 47%;
+
+      *{
+        margin: 20px 0;
+      }
+      h1{
+        @include default-header;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+      }
     }
-  }
-  .spot-image{
-    flex-basis: 23%;
 
   }
 }
